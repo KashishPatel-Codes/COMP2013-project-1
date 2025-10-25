@@ -1,6 +1,3 @@
-/* App.css */
-/* Basic styling for the groceries app */
-
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -16,18 +13,47 @@ body {
   padding: 15px 25px;
 }
 
-.app-container {
+.UserGreeting {
+  margin: 0;
+}
+
+.AppTitle {
+  margin: 0;
+}
+
+.CartIcon {
+  cursor: pointer;
+}
+
+.CartImage {
+  width: 40px;
+  height: 40px;
+}
+
+/* Main */
+.AppContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.MainContent {
   display: flex;
   gap: 30px;
   align-items: flex-start;
   padding: 20px;
 }
 
+/*  Product */
 .ProductsContainer {
   flex: 2;
 }
 
-.product-grid {
+.SectionTitle {
+  margin-bottom: 10px;
+}
+
+.ProductGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
@@ -40,13 +66,13 @@ body {
   text-align: center;
 }
 
-.product-image {
+.ProductImage {
   width: 100px;
   height: 100px;
   object-fit: contain;
 }
 
-.add-button {
+.AddButton {
   margin-top: 8px;
   background-color: #5c3aff;
   color: white;
@@ -56,10 +82,11 @@ body {
   cursor: pointer;
 }
 
-.add-button:hover {
+.AddButton:hover {
   background-color: #4e33d0;
 }
 
+/*  Cart Section */
 .CartContainer {
   flex: 1;
   background-color: #2a2a2a;
@@ -74,13 +101,25 @@ body {
   margin-bottom: 10px;
 }
 
-.cart-image {
+.CartItemInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.CartItemImage {
   width: 60px;
   height: 60px;
   object-fit: contain;
 }
 
-.remove {
+.CartItemDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.RemoveButton {
   background-color: #e84118;
   color: white;
   border: none;
@@ -90,7 +129,13 @@ body {
   width: 100%;
 }
 
-.empty {
+.CartFooter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.EmptyButton {
   background-color: #e84118;
   color: white;
   border: none;
@@ -99,26 +144,32 @@ body {
   cursor: pointer;
 }
 
-.checkout {
+.CheckoutButton {
   background-color: #28a745;
   color: white;
   border: none;
   border-radius: 6px;
   padding: 8px 12px;
-  margin-left: 10px;
   cursor: pointer;
 }
 
-.QuantityCounter button {
+/* Quantity Counter */
+.QuantityCounter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.QuantityButton {
   background-color: #444;
   color: white;
   border: none;
   padding: 4px 8px;
   border-radius: 4px;
-  margin: 0 4px;
   cursor: pointer;
 }
 
-.counter-value {
-  padding: 0 8px;
+.CounterValue {
+  font-weight: bold;
 }
